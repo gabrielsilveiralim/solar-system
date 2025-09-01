@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Rede from '../../assets/rede.png'
 import Explorar from '../../assets/telescopio.png'
 import Hamb from '../hamb/hambMenu';
+import Link from 'next/link';
 
 export default function Header() {
   return (
@@ -22,12 +23,13 @@ export default function Header() {
         <div className='hidden sm:flex sm:gap-6'>
           <div className='flex justify-center gap-2 hover:bg-blue-950 hover:font-semibold rounded-md w-40 p-1 '>
             <Image src={Rede} alt='' className='w-6 h-6' />
-            <a href='#'className='text-base'>Sistema Solar</a>
+            <Link href="/" className='text-base'>Sistema Solar</Link>
           </div>
 
         <div className='flex justify-center gap-2 hover:bg-blue-950 hover:font-semibold rounded-md w-35 p-1 '>
             <Image src={Explorar} alt='' className='w-6 h-6' />
-            <a href='#' className='text-base'>Explorar</a>
+            <Link href="/explorar" className='text-base'>Explorar</Link>
+
         </div>      
         </div>
       </section>

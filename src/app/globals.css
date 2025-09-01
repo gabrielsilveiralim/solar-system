@@ -2,7 +2,7 @@
 
 
 :root {
-  --background: linear-gradient( to bottom ,#000000, #040e25, #0f2d6d);
+  --background: linear-gradient( to bottom ,#000000 , #040e25 );
 
 }
 
@@ -19,5 +19,5 @@
 body {
   background: var(--background);
   font-family: Fira Sans;
-  height: 100vh;
+
 }
