@@ -2,9 +2,8 @@
 
 
 :root {
-  --background: linear-gradient( to left ,#1B3C82,  #060D1C);
-  --foreground: #171717;
-  --color-b: #BCC7E6 ;
+  --background: linear-gradient( to bottom ,#000000, #040e25, #0f2d6d);
+
 }
 
 @theme inline {
@@ -16,16 +15,9 @@
   --font-fira: Fira Sans, static;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --color-b: #BCC7E6 ;
-  }
-}
 
 body {
   background: var(--background);
-  color: var(--foreground);
   font-family: Fira Sans;
+  height: 100vh;
 }
