@@ -3,6 +3,7 @@ import Rede from '../../assets/rede.png'
 import Explorar from '../../assets/telescopio.png'
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 
@@ -29,12 +30,12 @@ export default function Hamb() {
         <ul className="flex flex-col md:flex-row gap-4 mr-2">
           <div className='flex justify-center gap-2 hover:bg-blue-950 hover:font-semibold rounded-md w-40 p-1 -mt-7.5'>
             <Image src={Rede} alt='' className='w-6 h-6' />
-            <a href='#' className='text-blue-100'>Sistema Solar</a>
+            <Link href="/" className='text-base'>Sistema Solar</Link>
           </div>
 
           <div className='flex justify-center gap-2 hover:bg-blue-950 hover:font-semibold rounded-md w-35 p-1 -mt-3'>
             <Image src={Explorar} alt='' className='w-6 h-6' />
-            <a href='#'  className='text-blue-100'>Explorar</a>
+            <Link href="/explorar" className='text-base'>Explorar</Link>
           </div>
         </ul>
       </nav>
