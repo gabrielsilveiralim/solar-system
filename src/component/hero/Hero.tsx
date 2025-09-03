@@ -6,7 +6,7 @@ import EarthComponent from '../SolarSystem/SystemTerra/solarSystemTerra'
 export default function Hero() {
     return (
     <>
-    <section className="relative flex justify-end flex-col text-blue-100 mt-50 ">
+    <section className="relative flex justify-end flex-col text-blue-100 mt-50">
             
             <div className="absolute -top-30 left-5 w-80 h-80 sm:w-2xl sm:h-[400px] sm:-left-10 md:w-3xl md:-left-20 md:h-[500px] lg:-left-10 lg:w-4xl xl:left-0 xl:w-5xl xl:h-[700px] 2xl:w-5xl 2xl:left-10 2xl:-top-40 2xl:h-[800px]">
                 <EarthComponent />

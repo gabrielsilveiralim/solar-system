@@ -30,9 +30,7 @@ export default function SolarSystem({
         <sphereGeometry args={[2.5, 64, 64]} />
         <meshStandardMaterial
           map={sunTexture}
-       
-          emissiveIntensity={1}
-        />
+          emissiveIntensity={1} />
       </mesh>
 
       {/* Planetas com órbitas */}
@@ -41,8 +39,7 @@ export default function SolarSystem({
           key={planet.id}
           planet={planet}
           animationSpeed={animationSpeed}
-          onClick={onPlanetClick}
-        />
+          onClick={onPlanetClick} />
       ))}
 
       {/* Controles: permitir rotação, desativar zoom e pan */}
@@ -83,8 +80,7 @@ function PlanetWithOrbit({
       {/* Órbita como um anel global */}
       <Ring
         args={[distance - 0.02, distance + 0.02, 128]}
-        rotation-x={-Math.PI / 2}
-      >
+        rotation-x={-Math.PI / 2} >
         <meshBasicMaterial color="white" opacity={0.3} transparent side={THREE.DoubleSide} />
       </Ring>
 
@@ -94,8 +90,7 @@ function PlanetWithOrbit({
         onClick={() => onClick(planet)}
         onPointerOver={() => (document.body.style.cursor = 'pointer')}
         onPointerOut={() => (document.body.style.cursor = 'default')}
-        scale={[size, size, size]}
-      >
+        scale={[size, size, size]} >
         <sphereGeometry args={[2, 64, 64]} />
         <meshStandardMaterial map={texture} />
       </mesh>

@@ -1,13 +1,14 @@
 import React from 'react';
 import { Planet } from '../SolarSystem/planetTypes';
 
-
 interface PlanetModalProps {
-  planet: Planet;
+  planet?: Planet; // Agora é opcional
   onClose: () => void;
 }
 
 export default function PlanetModal({ planet, onClose }: PlanetModalProps) {
+  if (!planet) return null;
+
   return (
     <div style={{
       position: 'absolute',
@@ -19,13 +20,14 @@ export default function PlanetModal({ planet, onClose }: PlanetModalProps) {
       padding: '20px',
       borderRadius: '12px',
       boxShadow: '0 0 10px rgba(0,0,0,0.3)',
-      zIndex: 10,
+      zIndex: '10',
     }}>
       <h2>{planet.name}</h2>
       <p><strong>Diâmetro:</strong> {planet.diameter} km</p>
       <p><strong>Distância do Sol:</strong> {planet.distance_from_sun} milhões km</p>
       <p><strong>Período orbital:</strong> {planet.orbital_period} dias</p>
-      
+      <p><strong>Luas:</strong></p>
+      <p><strong>Temperatura:</strong></p>
 
       <button onClick={onClose} style={{
         marginTop: 12,
