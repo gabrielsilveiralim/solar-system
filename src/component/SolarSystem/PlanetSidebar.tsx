@@ -13,7 +13,7 @@ export default function PlanetSidebar({ planets, onSelectPlanet }: PlanetSidebar
         <div
           key={planet.id}
           onClick={() => onSelectPlanet(planet)}
-          className='flex items-center  p-1 mb-1.5 cursor-pointer border-b-2 border-slate-900' >
+          className='flex items-center  p-1 mb-1.5 cursor-pointer border-b-2 border-slate-900 hover:bg-blue-950 hover:text-white rounded-lg' >
           <img src={planet.texturePath} alt={planet.name}
             style={{
               height: '24px',
