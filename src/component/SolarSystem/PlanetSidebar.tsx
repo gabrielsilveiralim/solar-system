@@ -1,4 +1,3 @@
-import React from 'react';
 import { Planet } from '../SolarSystem/planetTypes';
 
 interface PlanetSidebarProps {
@@ -15,7 +14,13 @@ export default function PlanetSidebar({ planets, onSelectPlanet }: PlanetSidebar
           key={planet.id}
           onClick={() => onSelectPlanet(planet)}
           className='flex items-center  p-1 mb-1.5 cursor-pointer border-b-2 border-slate-900' >
-          <div className='w-4 h-4 rounded-full mr-2.5'  />
+          <img src={planet.texturePath} alt={planet.name}
+            style={{
+              height: '24px',
+              width: '24px',
+              borderRadius: '50%',
+              marginRight: '10px',
+              objectFit: 'cover', }} />
           <span>{planet.name}</span>
         </div>
       ))}
